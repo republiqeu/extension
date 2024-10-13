@@ -1,0 +1,10 @@
+.env
+.DS_Store
+*.pdf
+*.png
+__pycache__
+build/
+output.html
+node_modules/
+dist/
+.venv/

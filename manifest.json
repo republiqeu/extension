@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Republiq",
+  "version": "1.0",
+  "description": "Own the algorithm",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "host_permissions": ["<all_urls>", "http://localhost:8000/*"],
+  "background": {
+    "service_worker": "dist/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["dist/contentScript.js"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "action": {
+    "default_popup": "src/popup.html"
+  }
+}

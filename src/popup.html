@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Republiq</title>
+    <style>
+      body {
+        width: 300px;
+        padding: 10px;
+        font-family: Arial, sans-serif;
+      }
+      #loginForm,
+      #loggedInView {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Republiq</h1>
+    <div id="loginForm">
+      <form id="loginFormElement">
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <div id="loggedInView">
+      <p>Logged in as: <span id="userEmail"></span></p>
+      <button id="logoutButton">Logout</button>
+    </div>
+    <p id="message"></p>
+    <script src="popup.js"></script>
+  </body>
+</html>
